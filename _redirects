@@ -1,7 +1,19 @@
-# Redirect old WP paths to new static paths
-/el/archiki/     /          301
-/el/archiki      /          301
-/en/home/        /en/        301
-/en/home         /en/        301
-/archiki/        /          301
-/archiki         /          301
+# Old WP paths → new static paths
+/el/archiki/        /          301
+/el/archiki         /          301
+/el/ypiresies/      /ypiresies/ 301
+/el/ypiresies       /ypiresies/ 301
+/el/erga/           /erga/      301
+/el/erga            /erga/      301
+/el/sxetika/        /sxetika/   301
+/el/sxetika         /sxetika/   301
+/el/epikoinonia/    /epikoinonia/ 301
+/el/epikoinonia     /epikoinonia/ 301
+/en/home/           /en/        301
+/en/home            /en/        301
+/en/services/       /en/services/ 200
+/en/projects/       /en/projects/ 200
+/en/about/          /en/about/  200
+/en/contact/        /en/contact/ 200
+/archiki/           /           301
+/archiki            /           301
