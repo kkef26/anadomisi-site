@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Υπηρεσίες — Solid Anadomisi Tech</title>
+  <meta name="description" content="Νέες κατασκευές, επισκευές, ανακαινίσεις και ενεργειακές αναβαθμίσεις στην Αθήνα. Δωρεάν αυτοψία.">
+  <meta property="og:title" content="Υπηρεσίες — Solid Anadomisi Tech">
+  <meta property="og:description" content="Νέες κατασκευές, επισκευές, ανακαινίσεις και ενεργειακές αναβαθμίσεις στην Αθήνα. Δωρεάν αυτοψία.">
+  <meta property="og:image" content="https://anadomisi.tech/wp-content/uploads/2026/03/ENERGY_thermo-prosopsi-ntrafi_AFTER_01.jpg">
+  <link rel="icon" href="https://anadomisi.tech/wp-content/uploads/2023/02/anadomisi-logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+/* ── Language Switcher ─────────────────────────────────── */
+  .lang-switcher {
+    display: flex; align-items: center; gap: 6px; margin-right: 20px;
+    font-family: var(--font-h); font-size: 10px; font-weight: 800; letter-spacing: 0.12em;
+  }
+  .lang-switcher a {
+    color: var(--mid); text-transform: uppercase;
+    padding: 5px 10px; border: 1.5px solid var(--border); transition: all .15s;
+  }
+  .lang-switcher a.active { color: var(--white); background: var(--blue); border-color: var(--blue); }
+  .lang-switcher a:hover:not(.active) { border-color: var(--blue); color: var(--blue); }
+
+  /* ── Dark B2B CTA ─────────────────────────────────────── */
+  .dark-cta-section {
+    background: #0B2265;
+    padding: 100px 40px;
+    text-align: center;
+  }
+  .dark-cta-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+  }
+  .dark-cta-tag {
+    font-family: var(--font-h);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    color: #2E9449;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  .dark-cta-headline {
+    font-family: var(--font-h);
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 900;
+    color: #F4F6F7;
+    line-height: 1.1;
+    margin: 0;
+  }
+  .dark-cta-accent {
+    color: #3FAE5A;
+  }
+  .dark-cta-sub {
+    font-family: var(--font-b);
+    font-size: 16px;
+    color: #666666;
+    line-height: 1.7;
+    max-width: 580px;
+    margin: 0;
+  }
+  .dark-cta-actions {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .dark-cta-btn {
+    display: inline-block;
+    background: #BDEDC5;
+    color: #0B2265;
+    font-family: var(--font-h);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    padding: 16px 36px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background .2s, transform .15s;
+  }
+  .dark-cta-btn:hover { background: #ffffff; transform: translateY(-2px); }
+  .dark-cta-link {
+    font-family: var(--font-h);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #2E9449;
+    text-decoration: none;
+    border-bottom: 1px solid #0a1d56;
+    padding-bottom: 2px;
+    transition: color .15s, border-color .15s;
+  }
+  .dark-cta-link:hover { color: #3FAE5A; border-color: #3FAE5A; }
+  .dark-cta-stats {
+    display: flex;
+    gap: 60px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .dc-stat span {
+    display: block;
+    font-family: var(--font-h);
+    font-size: 36px;
+    font-weight: 900;
+    color: #BDEDC5;
+    line-height: 1;
+  }
+  .dc-stat p {
+    font-family: var(--font-b);
+    font-size: 12px;
+    color: #2B2B2B;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 6px 0 0;
+  }
+  @media (max-width: 600px) {
+    .dark-cta-section { padding: 70px 24px; }
+    .dark-cta-stats { gap: 32px; }
+  }
+
+.cta-contact-list { margin-top: 32px; display: flex; flex-direction: column; gap: 18px; }
+.cta-contact-item { display: flex; align-items: center; gap: 16px; }
+.cta-ci-icon { width: 44px; height: 44px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: var(--blue); }
+.cta-ci-icon svg { width: 22px; height: 22px; fill: var(--white); }
+a.cta-ci-icon { text-decoration: none; transition: opacity .15s; }
+a.cta-ci-icon:hover { opacity: .85; }
+.cta-ci-whatsapp { background: #25D366 !important; }
+.cta-ci-viber { background: #7360F2 !important; }
+.cta-ci-label { font-family: var(--font-h); font-size: 10px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 3px; }
+.cta-ci-val { font-family: var(--font-h); font-size: 15px; font-weight: 700; color: var(--white); }
+.cta-ci-val a { color: var(--white); text-decoration: none; }
+.cta-ci-val a:hover { text-decoration: underline; }
+.cta-msg-icons { display: flex; gap: 10px; }
+  </style>
+</head>
+<body>
+
+<style>
+:root {
+  --blue:        #0B2265;
+  --green:       #3FAE5A;
+  --green-hover: #2E9449;
+  --green-light: #BDEDC5;
+  --dark:        #2B2B2B;
+  --mid:         #666666;
+  --light-grey:  #999999;
+  --border:      #dde0e4;
+  --off:         #F4F6F7;
+  --white:       #ffffff;
+  --font-h: 'Montserrat', sans-serif;
+  --font-b: 'Open Sans', sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--white); color: var(--dark); font-family: var(--font-b); overflow-x: hidden; }
+img { display: block; max-width: 100%; }
+a { text-decoration: none; color: inherit; }
+
+/* ─── NAV ─── */
+nav.sab-nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  height: 68px;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 56px;
+  background: var(--white);
+  border-bottom: 2px solid var(--blue);
+}
+.nav-logo img { height: 36px; width: auto; }
+.nav-links {
+  display: flex; gap: 40px; list-style: none;
+}
+.nav-links a {
+  font-family: var(--font-h);
+  font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--mid); transition: color .15s;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--blue); }
+.nav-cta {
+  font-family: var(--font-h);
+  font-size: 12px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
+  background: var(--green); color: var(--white);
+  padding: 10px 22px;
+  border: 2px solid var(--green);
+  transition: background .15s, border-color .15s;
+}
+.nav-cta:hover { background: var(--green-hover); border-color: var(--green-hover); }
+
+/* ─── PAGE HERO (inner pages) ─── */
+.page-hero-wrap {
+  padding-top: 68px;
+  background: var(--blue);
+  border-bottom: 2px solid var(--blue);
+  padding-bottom: 64px;
+}
+.page-hero-inner {
+  padding: 72px 56px 0;
+}
+.page-hero-eyebrow {
+  font-family: var(--font-h);
+  font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--green);
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 24px;
+}
+.page-hero-eyebrow::before { content: ''; width: 24px; height: 2px; background: var(--green); }
+.page-hero-title {
+  font-family: var(--font-h);
+  font-size: clamp(56px, 7vw, 110px);
+  font-weight: 900; text-transform: uppercase; line-height: 0.88;
+  letter-spacing: -0.02em;
+  color: var(--white);
+}
+.page-hero-title .accent { color: var(--green); }
+.page-hero-sub {
+  font-size: 16px; font-weight: 300; color: rgba(255,255,255,0.45); line-height: 1.75;
+  max-width: 540px; margin-top: 28px; font-family: var(--font-b);
+}
+
+/* ─── HOME HERO ─── */
+.hero {
+  padding-top: 68px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  border-bottom: 2px solid var(--blue);
+}
+.hero-left {
+  background: var(--blue);
+  padding: 80px 56px;
+  display: flex; flex-direction: column; justify-content: space-between;
+  border-right: 2px solid var(--blue);
+}
+.hero-eyebrow {
+  font-family: var(--font-h);
+  font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--green);
+  display: flex; align-items: center; gap: 12px;
+}
+.hero-eyebrow::before { content: ''; width: 24px; height: 2px; background: var(--green); }
+.hero-headline {
+  font-family: var(--font-h);
+  font-size: clamp(56px, 5.5vw, 96px);
+  font-weight: 900; text-transform: uppercase; line-height: 0.92;
+  letter-spacing: -0.02em;
+  color: var(--white);
+}
+.hero-headline .accent { color: var(--green); display: block; }
+.hero-bottom { display: flex; flex-direction: column; gap: 32px; }
+.hero-sub {
+  font-size: 15px; font-weight: 300; color: rgba(255,255,255,0.5); line-height: 1.75;
+  max-width: 380px;
+}
+.hero-btns { display: flex; gap: 12px; }
+.btn-solid {
+  font-family: var(--font-h);
+  font-size: 12px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
+  background: var(--green); color: var(--white);
+  padding: 14px 28px; border: 2px solid var(--green);
+  transition: background .15s, border-color .15s;
+}
+.btn-solid:hover { background: var(--green-hover); border-color: var(--green-hover); }
+.btn-outline {
+  font-family: var(--font-h);
+  font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+  border: 2px solid rgba(255,255,255,0.2);
+  padding: 14px 24px;
+  transition: border-color .15s, color .15s;
+}
+.btn-outline:hover { border-color: rgba(255,255,255,0.6); color: var(--white); }
+.hero-right {
+  position: relative; overflow: hidden;
+  background: #1a2f5e;
+}
+.hero-scenes { position: absolute; inset: 0; }
+.scene {
+  position: absolute; inset: 0;
+  opacity: 0; transition: opacity 0.7s ease;
+}
+.scene.active { opacity: 1; }
+.scene-before, .scene-after {
+  position: absolute; inset: 0;
+  background-size: cover; background-position: center;
+  transition: opacity 0.55s ease;
+}
+.scene-after { opacity: 0; }
+.scene.show-after .scene-after { opacity: 1; }
+.scene.show-after .scene-before { opacity: 0; }
+.state-block {
+  position: absolute; bottom: 0; left: 0; z-index: 10;
+  font-family: var(--font-h);
+  font-size: 11px; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase;
+  padding: 12px 22px;
+  background: var(--blue); color: rgba(255,255,255,0.5);
+  border-top: 2px solid rgba(255,255,255,0.15);
+  border-right: 2px solid rgba(255,255,255,0.15);
+  transition: background .4s, color .3s;
+}
+.state-block.meta { background: var(--green); color: var(--white); border-color: var(--green); }
+.cat-block {
+  position: absolute; top: 0; right: 0; z-index: 10;
+  font-family: var(--font-h);
+  font-size: 10px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase;
+  padding: 10px 20px;
+  background: rgba(11,34,101,0.8); color: rgba(255,255,255,0.75);
+  border-bottom: 2px solid rgba(255,255,255,0.12);
+  border-left: 2px solid rgba(255,255,255,0.12);
+}
+.scene-dots {
+  position: absolute; bottom: 14px; right: 20px; z-index: 10;
+  display: flex; gap: 6px; align-items: center;
+}
+.dot {
+  width: 6px; height: 6px;
+  background: rgba(255,255,255,0.3);
+  transition: background .2s, width .2s;
+  cursor: pointer;
+}
+.dot.active { background: var(--green); width: 18px; }
+
+/* ─── STATS BAR ─── */
+.stats-bar {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  border-bottom: 2px solid var(--blue);
+  background: var(--green-light);
+}
+.stat-block {
+  padding: 36px 56px;
+  border-right: 2px solid var(--blue);
+  display: flex; gap: 20px; align-items: center;
+}
+.stat-block:last-child { border-right: none; }
+.stat-num {
+  font-family: var(--font-h);
+  font-size: 60px; font-weight: 900; line-height: 1;
+  color: var(--blue);
+}
+.stat-num sup { font-size: 28px; color: var(--green); }
+.stat-text .stat-label {
+  font-family: var(--font-h);
+  font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--blue);
+}
+.stat-text .stat-sub {
+  font-size: 12px; color: var(--light-grey); margin-top: 4px;
+  font-family: var(--font-b);
+}
+
+/* ─── TICKER ─── */
+.ticker-wrap {
+  background: var(--green);
+  overflow: hidden; padding: 13px 0;
+  border-bottom: 2px solid var(--blue);
+}
+.ticker-track {
+  display: flex; gap: 60px; width: max-content;
+  animation: ticker 26s linear infinite;
+}
+.ticker-item {
+  font-family: var(--font-h);
+  font-size: 12px; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--white); white-space: nowrap;
+  display: flex; align-items: center; gap: 20px;
+}
+.ticker-sep { font-size: 16px; color: rgba(255,255,255,0.4); }
+@keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+/* ─── PROJECTS ─── */
+.projects-section { padding: 0; border-bottom: 2px solid var(--blue); }
+.projects-header {
+  padding: 64px 56px 52px;
+  border-bottom: 2px solid var(--blue);
+  display: flex; align-items: flex-end; justify-content: space-between;
+}
+.projects-eyebrow {
+  font-family: var(--font-h);
+  font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--green); margin-bottom: 12px;
+}
+.projects-title {
+  font-family: var(--font-h);
+  font-size: clamp(44px, 4.5vw, 72px);
+  font-weight: 900; text-transform: uppercase; line-height: 0.9;
+  letter-spacing: -0.02em; color: var(--blue);
+}
+.btn-blue-solid {
+  font-family: var(--font-h);
+  font-size: 11px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase;
+  background: var(--blue); color: var(--white);
+  padding: 14px 28px; border: 2px solid var(--blue);
+  transition: background .15s, color .15s;
+  white-space: nowrap;
+}
+.btn-blue-solid:hover { background: var(--green); border-color: var(--green); }
+.projects-grid { display: grid; grid-template-columns: 1fr 1fr; }
+.project-card {
+  border-right: 2px solid var(--blue);
+  border-bottom: 2px solid var(--blue);
+  overflow: hidden; position: relative;
+  aspect-ratio: 4/3;
+  cursor: pointer;
+}
+.project-card:nth-child(2n) { border-right: none; }
+.project-card:nth-child(3), .project-card:nth-child(4) { border-bottom: none; }
+.img-before, .img-after {
+  position: absolute; inset: 0;
+  background-size: cover; background-position: center;
+  transition: opacity .5s ease;
+}
+.img-after { opacity: 0; }
+.project-card:hover .img-after { opacity: 1; }
+.project-card:hover .img-before { opacity: 0; }
+.card-info {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 18px 24px;
+  background: var(--white);
+  border-top: 2px solid var(--blue);
+  display: flex; justify-content: space-between; align-items: center;
+  z-index: 5;
+}
+.card-name {
+  font-family: var(--font-h);
+  font-size: 16px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em;
+  color: var(--blue);
+}
+.card-type { font-size: 11px; font-weight: 400; color: var(--light-grey); margin-top: 3px; font-family: var(--font-b); }
+.card-tag {
+  font-family: var(--font-h);
+  font-size: 10px; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase;
+  padding: 6px 14px;
+  background: var(--blue); color: var(--white);
+  transition: background .2s;
+}
+.project-card:hover .card-tag { background: var(--green); }
+.corner-before, .corner-after {
+  position: absolute; z-index: 6;
+  font-family: var(--font-h);
+  font-size: 10px; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase;
+  padding: 5px 12px;
+}
+.corner-before { top: 14px; left: 14px; background: rgba(11,34,101,0.65); color: rgba(255,255,255,0.7); }
+.corner-after { top: 14px; right: 14px; background: var(--green); color: var(--white); opacity: 0; transition: opacity .5s; }
+.project-card:hover .corner-after { opacity: 1; }
+.project-card:hover .corner-before { opacity: 0; }
+
+/* ─── SERVICES ─── */
+.services-section { border-bottom: 2px solid var(--blue); }
+.services-header { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 2px solid var(--blue); }
+.services-header-left { padding: 64px 56px; border-right: 2px solid var(--blue); background: var(--blue); }
+.services-header-right { padding: 64px 56px; display: flex; flex-direction: column; justify-content: center; }
+.services-intro-title {
+  font-family: var(--font-h);
+  font-size: clamp(44px, 4vw, 68px); font-weight: 900;
+  text-transform: uppercase; line-height: 0.92; color: var(--white);
+}
+.services-intro-sub { font-size: 15px; font-weight: 300; color: var(--mid); line-height: 1.75; max-width: 360px; font-family: var(--font-b); }
+.services-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+.service-card { padding: 48px 32px; border-right: 2px solid var(--blue); background: var(--white); transition: background .2s; }
+.service-card:last-child { border-right: none; }
+.service-card:hover { background: var(--green-light); }
+.svc-num { font-family: var(--font-h); font-size: 48px; font-weight: 900; color: rgba(11,34,101,0.07); line-height: 1; margin-bottom: 16px; }
+.svc-line { width: 28px; height: 3px; background: var(--green); margin-bottom: 20px; }
+.svc-name { font-family: var(--font-h); font-size: 18px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--blue); margin-bottom: 12px; }
+.svc-desc { font-size: 13px; color: var(--mid); line-height: 1.7; font-family: var(--font-b); }
+
+/* ─── SERVICES DETAIL (Υπηρεσίες page) ─── */
+.svc-detail-grid { display: grid; grid-template-columns: 1fr 1fr; }
+.svc-detail-card {
+  padding: 64px 56px;
+  border-right: 2px solid var(--blue);
+  border-bottom: 2px solid var(--blue);
+}
+.svc-detail-card:nth-child(2n) { border-right: none; }
+.svc-detail-card:nth-last-child(-n+2) { border-bottom: none; }
+.svc-detail-num { font-family: var(--font-h); font-size: 64px; font-weight: 900; color: rgba(11,34,101,0.06); line-height: 1; }
+.svc-detail-line { width: 32px; height: 3px; background: var(--green); margin: 16px 0 24px; }
+.svc-detail-title { font-family: var(--font-h); font-size: 28px; font-weight: 900; text-transform: uppercase; color: var(--blue); margin-bottom: 16px; }
+.svc-detail-desc { font-size: 14px; color: var(--mid); line-height: 1.8; font-family: var(--font-b); }
+.svc-detail-list { margin-top: 20px; list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.svc-detail-list li { font-size: 13px; color: var(--mid); font-family: var(--font-b); display: flex; gap: 10px; align-items: flex-start; }
+.svc-detail-list li::before { content: '→'; color: var(--green); font-weight: 700; flex-shrink: 0; }
+
+/* ─── WHY US ─── */
+.why-section { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 2px solid var(--blue); }
+.why-img-col { position: relative; overflow: hidden; min-height: 560px; border-right: 2px solid var(--blue); }
+.why-img-col img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.why-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(11,34,101,0.7) 0%, transparent 55%); }
+.why-img-stat { position: absolute; bottom: 32px; left: 32px; font-family: var(--font-h); font-size: 72px; font-weight: 900; color: var(--white); line-height: 1; z-index: 2; }
+.why-img-stat span { font-size: 32px; color: var(--green); }
+.why-img-stat-sub { font-family: var(--font-h); font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-top: 4px; z-index: 2; position: relative; }
+.why-content-col { padding: 64px 56px; background: var(--green-light); }
+.why-title { font-family: var(--font-h); font-size: clamp(40px, 3.5vw, 60px); font-weight: 900; text-transform: uppercase; line-height: 0.92; margin-bottom: 48px; color: var(--blue); }
+.why-items { display: flex; flex-direction: column; }
+.why-item { padding: 24px 0; border-bottom: 1px solid var(--border); display: flex; gap: 24px; align-items: flex-start; }
+.why-item:first-child { padding-top: 0; }
+.why-n { font-family: var(--font-h); font-size: 12px; font-weight: 800; color: var(--green); width: 24px; flex-shrink: 0; margin-top: 2px; }
+.why-t strong { font-family: var(--font-h); font-size: 15px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--blue); display: block; margin-bottom: 8px; }
+.why-t p { font-size: 13px; color: var(--mid); line-height: 1.7; font-family: var(--font-b); }
+
+/* ─── PROCESS ─── */
+.process-section { background: var(--blue); border-bottom: 2px solid var(--blue); }
+.process-header { padding: 64px 56px 48px; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: flex-end; justify-content: space-between; }
+.process-title { font-family: var(--font-h); font-size: clamp(44px, 4vw, 66px); font-weight: 900; text-transform: uppercase; line-height: 0.92; color: var(--white); }
+.process-eyebrow { font-family: var(--font-h); font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--green); margin-bottom: 12px; }
+.process-steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+.process-step { padding: 48px 36px; border-right: 1px solid rgba(255,255,255,0.08); transition: background .2s; }
+.process-step:hover { background: rgba(63,174,90,0.07); }
+.process-step:last-child { border-right: none; }
+.ps-num { font-family: var(--font-h); font-size: 64px; font-weight: 900; color: rgba(255,255,255,0.05); line-height: 1; margin-bottom: 12px; }
+.ps-bar { width: 24px; height: 3px; background: var(--green); margin-bottom: 20px; }
+.ps-title { font-family: var(--font-h); font-size: 16px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; color: var(--white); margin-bottom: 12px; }
+.ps-desc { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.7; font-family: var(--font-b); }
+
+/* ─── CTA ─── */
+.cta-section {
+  background: var(--green);
+  padding: 80px 56px;
+  border-bottom: 2px solid var(--blue);
+  display: grid; grid-template-columns: 1fr auto;
+  align-items: center; gap: 60px;
+}
+.cta-title { font-family: var(--font-h); font-size: clamp(44px, 4.5vw, 72px); font-weight: 900; text-transform: uppercase; line-height: 0.9; color: var(--white); }
+.cta-sub { font-size: 15px; color: rgba(255,255,255,0.65); margin-top: 14px; font-family: var(--font-b); }
+.btn-cta-blue {
+  font-family: var(--font-h); font-size: 13px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
+  background: var(--blue); color: var(--white);
+  padding: 18px 36px; border: 2px solid var(--blue);
+  white-space: nowrap; transition: background .15s;
+}
+.btn-cta-blue:hover { background: #0a1d56; }
+
+/* ─── ABOUT PAGE ─── */
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 2px solid var(--blue); }
+.about-text-col { padding: 72px 56px; }
+.about-img-col { position: relative; overflow: hidden; min-height: 480px; border-left: 2px solid var(--blue); }
+.about-img-col img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.about-section-title { font-family: var(--font-h); font-size: clamp(36px, 3vw, 52px); font-weight: 900; text-transform: uppercase; line-height: 0.92; color: var(--blue); margin-bottom: 28px; }
+.about-body { font-size: 15px; color: var(--mid); line-height: 1.85; font-family: var(--font-b); }
+.about-body + .about-body { margin-top: 20px; }
+
+/* ─── CONTACT PAGE ─── */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 2px solid var(--blue); }
+.contact-info-col { padding: 72px 56px; border-right: 2px solid var(--blue); background: var(--blue); }
+.contact-form-col { padding: 72px 56px; }
+.contact-item { display: flex; gap: 20px; align-items: flex-start; margin-bottom: 40px; }
+.contact-item-icon { width: 44px; height: 44px; background: var(--green); flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+.contact-item-icon svg { width: 20px; height: 20px; fill: var(--white); }
+.contact-item-label { font-family: var(--font-h); font-size: 10px; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 6px; }
+.contact-item-val { font-family: var(--font-h); font-size: 18px; font-weight: 700; color: var(--white); }
+.contact-item-val a { color: var(--white); }
+.contact-form-title { font-family: var(--font-h); font-size: clamp(32px, 3vw, 48px); font-weight: 900; text-transform: uppercase; line-height: 0.92; color: var(--blue); margin-bottom: 36px; }
+.form-row { margin-bottom: 20px; }
+.form-label { font-family: var(--font-h); font-size: 10px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: var(--mid); display: block; margin-bottom: 8px; }
+.form-input, .form-textarea {
+  width: 100%; padding: 14px 18px;
+  border: 2px solid var(--border);
+  font-family: var(--font-b); font-size: 14px; color: var(--dark);
+  background: var(--white);
+  transition: border-color .15s;
+  outline: none;
+}
+.form-input:focus, .form-textarea:focus { border-color: var(--blue); }
+.form-textarea { resize: vertical; min-height: 120px; }
+.form-submit {
+  font-family: var(--font-h); font-size: 12px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
+  background: var(--green); color: var(--white);
+  padding: 16px 32px; border: 2px solid var(--green);
+  cursor: pointer; width: 100%;
+  transition: background .15s;
+}
+.form-submit:hover { background: var(--green-hover); }
+
+/* ─── FOOTER ─── */
+footer.sab-footer {
+  background: var(--blue);
+  padding: 64px 56px 32px;
+  border-top: 2px solid rgba(255,255,255,0.06);
+}
+.footer-grid { display: grid; grid-template-columns: 1.6fr repeat(3, 1fr); gap: 60px; margin-bottom: 56px; }
+.footer-logo-box { background: var(--white); display: inline-flex; padding: 6px 12px; margin-bottom: 18px; }
+.footer-logo-box img { height: 30px; width: auto; }
+.footer-tag { font-size: 13px; color: rgba(255,255,255,0.25); line-height: 1.7; max-width: 240px; font-family: var(--font-b); }
+.footer-col-h { font-family: var(--font-h); font-size: 10px; font-weight: 800; letter-spacing: 0.22em; text-transform: uppercase; color: var(--green); margin-bottom: 20px; }
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-links a { font-size: 13px; color: rgba(255,255,255,0.35); transition: color .2s; font-family: var(--font-b); }
+.footer-links a:hover { color: var(--white); }
+.footer-bar { padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.06); display: flex; justify-content: space-between; }
+.footer-legal { font-size: 12px; color: rgba(255,255,255,0.18); font-family: var(--font-b); }
+</style>
+<nav class="sab-nav">
+  <div class="nav-logo">
+    <a href="/"><img src="https://anadomisi.tech/wp-content/uploads/2023/02/anadomisi-logo.png" alt="Solid Anadomisi"></a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="/erga/">Έργα</a></li>
+    <li><a href="/ypiresies/" class="nav-active">Υπηρεσίες</a></li>
+    <li><a href="/sxetika/">Σχετικά</a></li>
+    <li><a href="/epikoinonia/">Επικοινωνία</a></li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:12px;">
+    <div class="lang-switcher">
+      <a href="/ypiresies/" class="active">ΕΛ</a>
+      <a href="/en/services">EN</a>
+    </div>
+    <a href="/epikoinonia/" class="nav-cta">Ζητήστε Προσφορά</a>
+  </div>
+</nav>
+
+<div class="page-hero-wrap">
+  <div class="page-hero-inner">
+    <p class="page-hero-eyebrow">Υπηρεσίες</p>
+    <h1 class="page-hero-title">Τι<br><span class="accent">Κάνουμε.</span></h1>
+    <p class="page-hero-sub">Εξειδικευμένες κατασκευαστικές υπηρεσίες με ιδιόκτητα συνεργεία. Χωρίς υπεργολάβους, χωρίς εκπλήξεις στο τελικό κόστος.</p>
+  </div>
+</div>
+
+<section class="services-section" style="border-top:2px solid var(--blue);">
+  <div class="svc-detail-grid">
+    <div class="svc-detail-card">
+      <div class="svc-detail-num">01</div>
+      <div class="svc-detail-line"></div>
+      <div class="svc-detail-title">Ανακαινίσεις</div>
+      <p class="svc-detail-desc">Αναλαμβάνουμε πλήρεις ανακαινίσεις κατοικιών, διαμερισμάτων, επαγγελματικών και εμπορικών χώρων. Από αρχή ως παράδοση με ένα μόνο σημείο επαφής.</p>
+      <ul class="svc-detail-list">
+        <li>Κατοικίες &amp; διαμερίσματα</li>
+        <li>Εμπορικοί χώροι &amp; γραφεία</li>
+        <li>Βαφές, σοβάδες, πλακάκια</li>
+        <li>Ξυλουργικές εργασίες &amp; ντουλάπες</li>
+        <li>Ηλεκτρολογικά &amp; υδραυλικά</li>
+      </ul>
+    </div>
+    <div class="svc-detail-card">
+      <div class="svc-detail-num">02</div>
+      <div class="svc-detail-line"></div>
+      <div class="svc-detail-title">Θερμομόνωση</div>
+      <p class="svc-detail-desc">Εξωτερική θερμομόνωση κτηρίων (ETICS/EPS) με πιστοποιημένα υλικά. Δραστική μείωση κόστους θέρμανσης και ψύξης, αναβαθμίζοντας ταυτόχρονα την εμφάνιση του κτηρίου.</p>
+      <ul class="svc-detail-list">
+        <li>Σύστημα εξωτερικής θερμομόνωσης ETICS</li>
+        <li>Θερμομόνωση οροφής &amp; υπόγειου</li>
+        <li>Εξοικονόμηση ενέργειας έως 50%</li>
+        <li>Πιστοποιημένα υλικά Knauf / STO / Baumit</li>
+      </ul>
+    </div>
+    <div class="svc-detail-card">
+      <div class="svc-detail-num">03</div>
+      <div class="svc-detail-line"></div>
+      <div class="svc-detail-title">Στεγανοποίηση</div>
+      <p class="svc-detail-desc">Μόνιμη λύση για υγρασία και διαρροές. Αδιαβροχοποίηση δωμάτων, ταρατσών, υπόγειων χώρων, θεμελίων και μπαλκονιών.</p>
+      <ul class="svc-detail-list">
+        <li>Αδιαβροχοποίηση δωμάτων &amp; ταρατσών</li>
+        <li>Στεγανοποίηση υπόγειων χώρων</li>
+        <li>Επισκευή ρηγματώσεων &amp; αρμών</li>
+        <li>Πολυουρεθάνη, ασφαλτικά &amp; κρυσταλλικά στεγανωτικά</li>
+      </ul>
+    </div>
+    <div class="svc-detail-card">
+      <div class="svc-detail-num">04</div>
+      <div class="svc-detail-line"></div>
+      <div class="svc-detail-title">Εμπορικά Έργα</div>
+      <p class="svc-detail-desc">Κατασκευή, διαμόρφωση και ανακαίνιση εμπορικών χώρων, εστιατορίων, ξενοδοχείων και γραφείων. Τηρούμε αυστηρά χρονοδιαγράμματα λόγω λειτουργικών αναγκών.</p>
+      <ul class="svc-detail-list">
+        <li>Καταστήματα &amp; εστιατόρια</li>
+        <li>Γραφεία &amp; εταιρικοί χώροι</li>
+        <li>Ξενοδοχεία &amp; τουριστικά καταλύματα</li>
+        <li>Εργοτάξια με project manager</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="process-section">
+  <div class="process-header">
+    <div>
+      <p class="process-eyebrow">Διαδικασία</p>
+      <h2 class="process-title">Πώς<br>Δουλεύουμε.</h2>
+    </div>
+  </div>
+  <div class="process-steps-grid">
+    <div class="process-step">
+      <div class="ps-num">01</div>
+      <div class="ps-bar"></div>
+      <div class="ps-title">Αυτοψία</div>
+      <p class="ps-desc">Επίσκεψη, καταγραφή αναγκών και αξιολόγηση του έργου χωρίς χρέωση.</p>
+    </div>
+    <div class="process-step">
+      <div class="ps-num">02</div>
+      <div class="ps-bar"></div>
+      <div class="ps-title">Προσφορά</div>
+      <p class="ps-desc">Αναλυτική προσφορά με υλικά, εργασία και χρονοδιάγραμμα. Χωρίς κρυφά κόστη.</p>
+    </div>
+    <div class="process-step">
+      <div class="ps-num">03</div>
+      <div class="ps-bar"></div>
+      <div class="ps-title">Εκτέλεση</div>
+      <p class="ps-desc">Τα συνεργεία μας ξεκινούν. Τηρούμε χρόνους και ποιότητα σε κάθε στάδιο.</p>
+    </div>
+    <div class="process-step">
+      <div class="ps-num">04</div>
+      <div class="ps-bar"></div>
+      <div class="ps-title">Παράδοση</div>
+      <p class="ps-desc">Τελική επιθεώρηση, παράδοση εγγράφων και υποστήριξη μετά το έργο.</p>
+    </div>
+  </div>
+</section>
+<section class="cta-section">
+  <div>
+    <h2 class="cta-title">Μιλήστε μας<br>
+για το έργο<br>
+σας.</h2>
+    <p class="cta-sub">Δωρεάν αυτοψία στον χώρο σας. Επικοινωνούμε εντός 24 ωρών — χωρίς υποχρεώσεις.</p>
+    <div class="cta-contact-list">
+      <div class="cta-contact-item">
+        <div class="cta-ci-icon">
+          <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        </div>
+        <div>
+          <div class="cta-ci-label">Κινητό</div>
+          <div class="cta-ci-val"><a href="tel:+306946008822">+30 694 600 8822</a></div>
+        </div>
+      </div>
+      <div class="cta-contact-item">
+        <div class="cta-ci-icon">
+          <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        </div>
+        <div>
+          <div class="cta-ci-label">Γραφείο</div>
+          <div class="cta-ci-val"><a href="tel:+302160046006">216 004 6006</a>&nbsp;·&nbsp;<a href="tel:+302160046007">216 004 6007</a></div>
+        </div>
+      </div>
+      <div class="cta-contact-item">
+        <div class="cta-ci-icon">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </div>
+        <div>
+          <div class="cta-ci-label">Email</div>
+          <div class="cta-ci-val"><a href="mailto:info@anadomisi.tech">info@anadomisi.tech</a><br><a href="mailto:anadomisitech@gmail.com">anadomisitech@gmail.com</a></div>
+        </div>
+      </div>
+      <div class="cta-contact-item">
+        <div class="cta-msg-icons">
+          <a href="https://wa.me/306946008822" class="cta-ci-icon cta-ci-whatsapp" target="_blank" rel="noopener" title="WhatsApp">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          </a>
+          <a href="viber://chat?number=+306946008822" class="cta-ci-icon cta-ci-viber" title="Viber">
+            <svg viewBox="0 0 24 24"><path d="M11.4 0C5.7.3 1.1 4.2.2 9.8c-.6 3.9.3 7.5 2.6 10.4l.1.1v3.3c0 .2.1.3.3.3h3.3l.1.1c1.9 1.3 4.1 2 6.5 2 .6 0 1.2 0 1.8-.1 5.4-.7 9.7-4.9 10.8-10.2.3-1.4.4-2.8.3-4.1C25.4 5.2 21.2.8 15.6.1c-.1 0-.7-.1-1.3-.1H11.4zm3.7 2.3c4.7.7 8.4 4.7 8.7 9.5.1 1.2 0 2.4-.3 3.6-.9 4.5-4.6 8-9.2 8.6-.5.1-1.1.1-1.6.1-2.1 0-4-.6-5.7-1.7l-.3-.2H4.4V19l-.2-.3C2 16.4 1.1 13.3 1.7 10c.8-4.8 4.8-8.4 9.7-8.7.3 0 .7 0 1 0 .9 0 1.8.1 2.7.3v.7zm-1.4 3.3c-.4-.1-.8.2-.9.6-.1.4.2.8.6.9 2.8.6 4.7 2.5 5.3 5.3.1.4.4.6.8.6h.1c.4-.1.6-.5.5-.9-.7-3.3-3-5.7-6.4-6.5zM8.3 7.5c-.2 0-.4.1-.6.2-.6.4-1.3 1.3-1.5 2-.1.4-.1.8 0 1.3 1.1 3.9 4.7 7.5 8.6 8.7.4.1.8.2 1.2.2.8 0 1.6-.3 2.1-.9.2-.2.3-.5.3-.5v-.1c-.1-.5-.7-1.4-1.3-1.9-.5-.4-1-.5-1.4-.3l-.9.9c-.1.1-.3.2-.5.2-.2 0-.3 0-.5-.1-1.8-.9-3.4-2.5-4.3-4.3-.1-.2-.1-.3-.1-.5 0-.2.1-.3.2-.5l.9-.9c.2-.4.1-.9-.3-1.4-.5-.6-1.4-1.2-1.9-1.3-.1 0-.1-.1-.1-.1s0 .1 0 0c0 0 0 0-.1 0h0zm5.6.7c-.4-.1-.8.2-.9.6-.1.4.2.7.5.8 1.6.4 2.7 1.5 3.1 3.1.1.4.4.6.8.6h.1c.4-.1.6-.5.5-.9-.6-2.1-2.1-3.6-4.1-4.2z"/></svg>
+          </a>
+        </div>
+        <div>
+          <div class="cta-ci-label">Άμεση Επικοινωνία</div>
+          <div class="cta-ci-val">WhatsApp &amp; Viber</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="/epikoinonia/" class="btn-cta-blue">Καλέστε Τώρα →</a>
+</section>
+
+<!-- DARK B2B CTA -->
+<section class="dark-cta-section">
+  <div class="dark-cta-inner">
+    <p class="dark-cta-tag">ΕΡΓΟΛΑΒΟΣ ΕΜΠΙΣΤΟΣΥΝΗΣ · 30+ ΧΡΟΝΙΑ</p>
+    <h2 class="dark-cta-headline">
+      Δίνουμε μορφή σε αυτό<br>που <span class="dark-cta-accent">οραματίζεστε.</span>
+    </h2>
+    <p class="dark-cta-sub">
+      Εργαζόμαστε με επενδυτές ακινήτων, διαχειριστές πολυκατοικιών και ιδιώτες που θέλουν να κάνουν σωστά το έργο τους — από την αρχή ως το τέλος, χωρίς εκπλήξεις.
+    </p>
+    <div class="dark-cta-actions">
+      <a href="/epikoinonia/" class="dark-cta-btn">ΕΠΙΚΟΙΝΩΝΗΣΤΕ ΜΑΖΙ ΜΑΣ</a>
+      <a href="/erga/" class="dark-cta-link">Δείτε το χαρτοφυλάκιό μας →</a>
+    </div>
+    <div class="dark-cta-stats">
+      <div class="dc-stat"><span>250+</span><p>Ολοκληρωμένα Έργα</p></div>
+      <div class="dc-stat"><span>30+</span><p>Χρόνια Εμπειρίας</p></div>
+      <div class="dc-stat"><span>98%</span><p>Ικανοποίηση Πελατών</p></div>
+    </div>
+  </div>
+</section>
+<!-- END DARK B2B CTA -->
+<footer class="sab-footer">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo-box">
+        <img src="https://anadomisi.tech/wp-content/uploads/2023/02/anadomisi-logo.png" alt="Solid Anadomisi">
+      </div>
+      <p class="footer-tag">Μεταμορφώνουμε χώρους σε Αθήνα και Αττική από το 1994.</p>
+    </div>
+    <div>
+      <div class="footer-col-h">Υπηρεσίες</div>
+      <ul class="footer-links">
+        <li><a href="/ypiresies/" class="nav-active">Ανακαινίσεις</a></li>
+        <li><a href="/ypiresies/" class="nav-active">Θερμομόνωση</a></li>
+        <li><a href="/ypiresies/" class="nav-active">Στεγανοποίηση</a></li>
+        <li><a href="/ypiresies/" class="nav-active">Εμπορικά</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-h">Εταιρεία</div>
+      <ul class="footer-links">
+        <li><a href="/sxetika/">Σχετικά</a></li>
+        <li><a href="/erga/">Έργα</a></li>
+        <li><a href="/epikoinonia/">Επικοινωνία</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-h">Επικοινωνία</div>
+      <ul class="footer-links">
+        <li><a href="tel:+30210000000">+30 210 000 0000</a></li>
+        <li><a href="mailto:info@anadomisi.tech">info@anadomisi.tech</a></li>
+        <li><a href="#">Αθήνα, Αττική</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bar">
+    <span class="footer-legal">© 2026 Solid Anadomisi Tech. Όλα τα δικαιώματα διατηρούνται.</span>
+    <span class="footer-legal">anadomisi.tech</span>
+  </div>
+</footer>
+</body>
+</html>
