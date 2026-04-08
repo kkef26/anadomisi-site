@@ -8,7 +8,6 @@
   <meta property="og:title" content="Solid Anadomisi Tech — Κατασκευές & Ανακαινίσεις στην Αθήνα">
   <meta property="og:description" content="Αξιόπιστες κατασκευές, ανακαινίσεις και ενεργειακές αναβαθμίσεις στην Αθήνα και Αττική. 30+ χρόνια εμπειρίας.">
   <meta property="og:image" content="https://anadomisi.tech/wp-content/uploads/2026/03/ENERGY_thermo-prosopsi-ntrafi_AFTER_01.jpg">
-  <meta property="og:url" content="https://anadomisi.tech/">
   <link rel="icon" href="https://anadomisi.tech/wp-content/uploads/2023/02/anadomisi-logo.png">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
@@ -199,6 +198,19 @@
 .sdot.active { background: var(--green); width: 18px; }
 
 
+.cta-contact-list { margin-top: 32px; display: flex; flex-direction: column; gap: 18px; }
+.cta-contact-item { display: flex; align-items: center; gap: 16px; }
+.cta-ci-icon { width: 44px; height: 44px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: var(--blue); }
+.cta-ci-icon svg { width: 22px; height: 22px; fill: var(--white); }
+a.cta-ci-icon { text-decoration: none; transition: opacity .15s; }
+a.cta-ci-icon:hover { opacity: .85; }
+.cta-ci-whatsapp { background: #25D366 !important; }
+.cta-ci-viber { background: #7360F2 !important; }
+.cta-ci-label { font-family: var(--font-h); font-size: 10px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 3px; }
+.cta-ci-val { font-family: var(--font-h); font-size: 15px; font-weight: 700; color: var(--white); }
+.cta-ci-val a { color: var(--white); text-decoration: none; }
+.cta-ci-val a:hover { text-decoration: underline; }
+.cta-msg-icons { display: flex; gap: 10px; }
   </style>
 </head>
 <body>
@@ -785,17 +797,17 @@ footer.sab-footer {
     <a href="/"><img src="https://anadomisi.tech/wp-content/uploads/2023/02/anadomisi-logo.png" alt="Solid Anadomisi"></a>
   </div>
   <ul class="nav-links">
-    <li><a href="/erga">Έργα</a></li>
-    <li><a href="/ypiresies">Υπηρεσίες</a></li>
-    <li><a href="/sxetika">Σχετικά</a></li>
-    <li><a href="/epikoinonia">Επικοινωνία</a></li>
+    <li><a href="/erga/">Έργα</a></li>
+    <li><a href="/ypiresies/">Υπηρεσίες</a></li>
+    <li><a href="/sxetika/">Σχετικά</a></li>
+    <li><a href="/epikoinonia/">Επικοινωνία</a></li>
   </ul>
   <div style="display:flex;align-items:center;gap:12px;">
     <div class="lang-switcher">
       <a href="/" class="active">ΕΛ</a>
       <a href="/en/">EN</a>
     </div>
-    <a href="/epikoinonia" class="nav-cta">Ζητήστε Προσφορά</a>
+    <a href="/epikoinonia/" class="nav-cta">Ζητήστε Προσφορά</a>
   </div>
 </nav>
 
@@ -819,8 +831,8 @@ footer.sab-footer {
     </h1>
     <p class="hero-sub">Κατασκευές, ανακαινίσεις και θερμομόνωση σε Αθήνα και Αττική από το 1994. Δουλεύουμε με τους δικούς μας ανθρώπους — για ιδιώτες που θέλουν αξιόπιστο εργολάβο και επενδυτές που θέλουν αποτέλεσμα στη σωστή τιμή.</p>
     <div class="hero-btns">
-      <a href="/erga" class="btn-solid">Δείτε Έργα</a>
-      <a href="/epikoinonia" class="btn-outline">Δωρεάν Αυτοψία</a>
+      <a href="/erga/" class="btn-solid">Δείτε Έργα</a>
+      <a href="/epikoinonia/" class="btn-outline">Δωρεάν Αυτοψία</a>
     </div>
     <div class="hero-dots" id="heroDots">
       <button class="hero-dot active"></button>
@@ -897,7 +909,7 @@ footer.sab-footer {
       <p class="projects-eyebrow">Επιλεγμένα Έργα</p>
       <h2 class="projects-title">Πριν &amp;<br>Μετά...</h2>
     </div>
-    <a href="/erga" class="btn-blue-solid">Όλα τα Έργα →</a>
+    <a href="/erga/" class="btn-blue-solid">Όλα τα Έργα →</a>
   </div>
   <div class="projects-grid" id="projectsGrid">
     <div class="project-card">
@@ -1081,7 +1093,7 @@ footer.sab-footer {
       </div>
     </div>
   </div>
-  <a href="/epikoinonia" class="btn-cta-blue">Καλέστε Τώρα →</a>
+  <a href="/epikoinonia/" class="btn-cta-blue">Καλέστε Τώρα →</a>
 </section>
 
 <!-- DARK B2B CTA -->
@@ -1095,8 +1107,8 @@ footer.sab-footer {
       Εργαζόμαστε με επενδυτές ακινήτων, διαχειριστές πολυκατοικιών και ιδιώτες που θέλουν να κάνουν σωστά το έργο τους — από την αρχή ως το τέλος, χωρίς εκπλήξεις.
     </p>
     <div class="dark-cta-actions">
-      <a href="/epikoinonia" class="dark-cta-btn">ΕΠΙΚΟΙΝΩΝΗΣΤΕ ΜΑΖΙ ΜΑΣ</a>
-      <a href="/erga" class="dark-cta-link">Δείτε το χαρτοφυλάκιό μας →</a>
+      <a href="/epikoinonia/" class="dark-cta-btn">ΕΠΙΚΟΙΝΩΝΗΣΤΕ ΜΑΖΙ ΜΑΣ</a>
+      <a href="/erga/" class="dark-cta-link">Δείτε το χαρτοφυλάκιό μας →</a>
     </div>
     <div class="dark-cta-stats">
       <div class="dc-stat"><span>250+</span><p>Ολοκληρωμένα Έργα</p></div>
@@ -1117,18 +1129,18 @@ footer.sab-footer {
     <div>
       <div class="footer-col-h">Υπηρεσίες</div>
       <ul class="footer-links">
-        <li><a href="/ypiresies">Ανακαινίσεις</a></li>
-        <li><a href="/ypiresies">Θερμομόνωση</a></li>
-        <li><a href="/ypiresies">Στεγανοποίηση</a></li>
-        <li><a href="/ypiresies">Εμπορικά</a></li>
+        <li><a href="/ypiresies/">Ανακαινίσεις</a></li>
+        <li><a href="/ypiresies/">Θερμομόνωση</a></li>
+        <li><a href="/ypiresies/">Στεγανοποίηση</a></li>
+        <li><a href="/ypiresies/">Εμπορικά</a></li>
       </ul>
     </div>
     <div>
       <div class="footer-col-h">Εταιρεία</div>
       <ul class="footer-links">
-        <li><a href="/sxetika">Σχετικά</a></li>
-        <li><a href="/erga">Έργα</a></li>
-        <li><a href="/epikoinonia">Επικοινωνία</a></li>
+        <li><a href="/sxetika/">Σχετικά</a></li>
+        <li><a href="/erga/">Έργα</a></li>
+        <li><a href="/epikoinonia/">Επικοινωνία</a></li>
       </ul>
     </div>
     <div>
