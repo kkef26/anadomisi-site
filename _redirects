@@ -1,0 +1,7 @@
+# Redirect old WP paths to new static paths
+/el/archiki/     /          301
+/el/archiki      /          301
+/en/home/        /en/        301
+/en/home         /en/        301
+/archiki/        /          301
+/archiki         /          301
